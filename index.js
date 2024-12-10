@@ -8,10 +8,11 @@ app.use(express.json());
 
 require('dotenv').config();
 
-const mongoUrl = process.env.MONGO_URL
+const mongoURL = process.env.MONGO_URL
+
 // Connect to MongoDB
 mongoose
-    .connect('mongoURL', {
+    .connect(mongoURL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
